@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor de Conversión y ALU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Motor de Conversión de Bases</h1>
+        <p>Conversión numérica y arquitectura digital</p>
+    </header>
+
+    <main>
+
+        <section class="card">
+
+            <h2>Entrada de datos</h2>
+
+            <div class="form-group">
+                <label for="numero">Número:</label>
+                <input
+                    type="text"
+                    id="numero"
+                    placeholder="Ejemplo: 1010"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="base">Base de entrada:</label>
+
+                <select id="base">
+                    <option value="2">Binario (Base 2)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="10" selected>Decimal (Base 10)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="bits">Tamaño de palabra:</label>
+
+                <select id="bits">
+                    <option value="8">8 bits (Byte)</option>
+                    <option value="16">16 bits (Word)</option>
+                    <option value="32">32 bits (DWord)</option>
+                    <option value="64">64 bits (QWord)</option>
+                </select>
+            </div>
+
+            <button id="convertir">Convertir</button>
+
+            <div id="mensaje"></div>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Panel de registros</h2>
+
+            <div class="resultados">
+
+                <div class="resultado">
+                    <span>Base 2</span>
+                    <input type="text" id="resultadoBinario" readonly>
+                </div>
+
+                <div class="resultado">
+                    <span>Base 8</span>
+                    <input type="text" id="resultadoOctal" readonly>
+                </div>
+
+                <div class="resultado">
+                    <span>Base 10</span>
+                    <input type="text" id="resultadoDecimal" readonly>
+                </div>
+
+                <div class="resultado">
+                    <span>Base 16</span>
+                    <input type="text" id="resultadoHexadecimal" readonly>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>ALU - Operaciones lógicas</h2>
+
+            <p>
+                Ingresa dos números binarios para realizar operaciones
+                bit a bit.
+            </p>
+
+            <div class="alu-inputs">
+
+                <div class="form-group">
+                    <label for="binarioA">Binario A:</label>
+                    <input
+                        type="text"
+                        id="binarioA"
+                        placeholder="1010"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="binarioB">Binario B:</label>
+                    <input
+                        type="text"
+                        id="binarioB"
+                        placeholder="1100"
+                    >
+                </div>
+
+            </div>
+
+            <div class="botones-alu">
+                <button onclick="operacionALU('AND')">AND</button>
+                <button onclick="operacionALU('OR')">OR</button>
+                <button onclick="operacionALU('XOR')">XOR</button>
+            </div>
+
+            <div class="alu-resultado">
+                <label>Resultado:</label>
+                <input type="text" id="resultadoALU" readonly>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
