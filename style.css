@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f5f9;
+    color: #1f2937;
+}
+
+header {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    color: #172554;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#mensaje {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.resultados {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.resultado span {
+    font-weight: bold;
+}
+
+.resultado input {
+    background: #f8fafc;
+    font-family: monospace;
+}
+
+.alu-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.botones-alu {
+    margin: 10px 0 20px;
+}
+
+.alu-resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.alu-resultado label {
+    font-weight: bold;
+}
+
+#resultadoALU {
+    background: #f8fafc;
+    font-family: monospace;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+}
+
+@media (max-width: 650px) {
+
+    .resultados,
+    .alu-inputs {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 95%;
+    }
+}
